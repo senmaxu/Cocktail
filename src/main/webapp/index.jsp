@@ -81,28 +81,28 @@
   
   
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957544" href="index.htm"  >首页</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957544" href="index.jsp"  >首页</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="products.htm"  >在线商城</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="products.jsp"  >在线商城</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957546" href="g000007.htm" >品酒文化</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957546" href="g000007.jsp" >品酒文化</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957547" href="blogs.htm"  >品牌介绍</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957547" href="blogs.jsp"  >品牌介绍</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -112,28 +112,28 @@
 
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957548" href="g000003.htm"  >联系我们</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957548" href="g000003.jsp"  >联系我们</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="products.htm" >品种介绍</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="products.jsp" >品种介绍</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957550" href="blogs.htm"  >博客</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957550" href="blogs.jsp"  >博客</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="products.htm"  >最新动态</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="products.jsp"  >最新动态</a>
     <!-- 二级菜单 -->
        
   </li>

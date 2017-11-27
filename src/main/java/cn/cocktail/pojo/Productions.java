@@ -15,7 +15,7 @@ public class Productions {
 	private int sales;    //销量
 	private int rumCount;   //该品种酒的数量（库存量）
 	private BigDecimal price;   //价格
-	private int type;    //酒的类别
+	private int type;    //酒的类别id
 	private int brand;  // 品牌 id
 	private String picture;    //上传图片
 	private Date uploadTime;    //上传时间
@@ -25,6 +25,13 @@ public class Productions {
 	private Date modifiedDate;    //修改时间
 	private String proCode;   //商品编号
 	private int activated;     //是否已激活（0=没激活，1=已激活）
+	private int userId;    //用户Id
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public int getId() {
 		return id;
 	}

@@ -169,7 +169,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="log-block">
                     <h4 class="yhsd-font-title">登录</h4>
 
-                        <form class="input-field" id="yhsd-login-inputField" action="javascript:void(0);">
+                        <form class="input-field" id="yhsd-login-inputField" action="javascript:void(0);${pageContext.request.contextPath }/login.html">
                             <div class="input-area input-area-lg" data-state="">
                                  <div class="title">手机/邮箱/用户名</div>
                                       <input class="input yhsd-font-text" type="text" name="account" maxlength="200">
