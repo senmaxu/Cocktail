@@ -30,17 +30,17 @@
 		<property name="dataSource" ref="dataSource"/>
 		<!-- 实体类别名 -->
 		<property name="typeAliasesPackage"
-			value="cn.appinfo.pojo"/>
+			value="cn.cocktail.pojo"/>
 		<!-- 扫描SQL映射文件 -->
 		<property name="mapperLocations">
 			<list>
-				<value>classpath:cn/appinfo/mapper/xml/*.xml</value>
+				<value>classpath:cn/cocktail/mapper/xml/*.xml</value>
 			</list>
 		</property>
 	</bean>
 <!-- MapperScannerConfigurator -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="cn.appinfo.mapper"/>
+		<property name="basePackage" value="cn.cocktail.mapper"/>
 	</bean>
 <!-- 事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -61,7 +61,7 @@
 	</tx:advice>
 <!-- AOP切面 -->	
 	<aop:config>
-		<aop:pointcut expression="execution(* cn.appinfo.service.*.*(..))" id="pointcut"/>
+		<aop:pointcut expression="execution(* cn.cocktail.service.*.*(..))" id="pointcut"/>
 		<aop:advisor advice-ref="txAdvie" pointcut-ref="pointcut"/>
 	</aop:config>
 </beans>
