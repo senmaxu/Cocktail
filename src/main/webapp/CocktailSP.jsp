@@ -3,6 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie6 settings-main_background"> <![endif]-->
@@ -145,7 +146,7 @@ s.parentNode.insertBefore(yt, s);});</script>
                         <span class="main-ico main-ico-search iconfont icon-sousuo"></span>
                     </a>
                     <div id="yhsd-header-search-ipt" class="header-search">
-                        <input class="search-ipt settings-ipt_border" type="text" placeholder="搜索全店" />
+                        <input class="search-ipt settings-ipt_border" type="text" placeholder="搜索全店" name="" />
                     </div>
                     <div id="yhsd_topCart_show" class="header-cart">
                         <span class="main-ico main-ico-cart icon-gouwuche iconfont"></span><span class="topCart-quantity settings-top_color" id="yhsd_topCart_quantityTitle"></span>
@@ -209,15 +210,15 @@ s.parentNode.insertBefore(yt, s);});</script>
       <div class="pro_list_filter-pro-item">
         <div class="pro_list_filter-pro-item-name">品牌</div>
         <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick">
-          <option value="0">不限</option>
+          <option value="0"  name="brand" >不限</option>
           
-          <option value="1" data-url="/products/?size=12&ve=%E7%99%BE%E9%BE%84%E5%9D%9B%E7%89%B9%E9%86%87">百龄坛特醇</option>
+          <option value="1"  name="brand" >百龄坛特醇</option>
           
-          <option value="2" data-url="/products/?size=12&ve=%E5%9C%A3%E8%8A%9D">圣芝</option>
+          <option value="2"  name="brand" >圣芝</option>
           
-          <option value="3" data-url="/products/?size=12&ve=SKYY">SKYY</option>
+          <option value="3"  name="brand" >SKYY</option>
           
-          <option value="4" data-url="/products/?size=12&ve=%E5%AE%9D%E6%A0%91%E8%A1%8C">宝树行</option>
+          <option value="4"  name="brand" >宝树行</option>
           
         </select>
       </div>
@@ -228,17 +229,17 @@ s.parentNode.insertBefore(yt, s);});</script>
       <div class="pro_list_filter-pro-item">
         <div class="pro_list_filter-pro-item-name">类别</div>
         <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick">
-          <option value="0">不限</option>
+          <option value="0"  name="type" >不限</option>
           
-          <option value="1" data-url="/products/?size=12&ty=%E7%BA%A2%E9%85%92">红酒</option>
+          <option value="1"  name="type" >红酒</option>
           
-          <option value="2" data-url="/products/?size=12&ty=%E9%B8%A1%E5%B0%BE%E9%85%92">鸡尾酒</option>
+          <option value="2"  name="type" >鸡尾酒</option>
           
-          <option value="3" data-url="/products/?size=12&ty=%E7%99%BD%E5%85%B0%E5%9C%B0">白兰地</option>
+          <option value="3"  name="type" >白兰地</option>
           
-          <option value="4" data-url="/products/?size=12&ty=%E5%A8%81%E5%A3%AB%E5%BF%8C">威士忌</option>
+          <option value="4"  name="type" >威士忌</option>
           
-          <option value="5" data-url="/products/?size=12&ty=%E4%BC%8F%E7%89%B9%E5%8A%A0">伏特加</option>
+          <option value="5"  name="" >伏特加</option>
           
         </select>
       </div>
@@ -270,19 +271,19 @@ s.parentNode.insertBefore(yt, s);});</script>
               <th class="prolist-spfilter-head settings-desc_color">排序：</th>
               <td>
                 <div class="prolist-spfilter-cond">
-                  <a href="-size=12&so=sale_desc.htm"  class=" settings-main_border settings-desc_color ">销量</a>
+                  <a  name="sales"  class=" settings-main_border settings-desc_color ">销量</a>
                   
                     
-                      <a class="settings-main_border settings-desc_color" href="-size=12&so=price_asc.htm" >价格↑</a>
+                      <a class="settings-main_border settings-desc_color"  name="price"  >价格↑</a>
                     
                   
-                  <a href="-size=12&so=date_desc.htm" class=" settings-main_border settings-desc_color ">上架时间</a>
-                  <label class="prolist-spfilter-cond-chk settings-desc_color" onclick="window.location.href='-size=12&ex=1.htm'/*tpa=http://qingdan.theme.yurl.vip/products/?size=12&ex=1*/"><input type="checkbox" />仅显示有货</label>
+                  <a  name="uploadTime"  class=" settings-main_border settings-desc_color ">上架时间</a>
+<!--                   <label class="prolist-spfilter-cond-chk settings-desc_color" onclick="window.location.href='-size=12&ex=1.htm'/*tpa=http://qingdan.theme.yurl.vip/products/?size=12&ex=1*/"><input type="checkbox" />仅显示有货</label> -->
                 </div>
               </td>
-              <td class="prolist-spfilter-cnt settings-desc_color">
+   <!--            <td class="prolist-spfilter-cnt settings-desc_color">
                 共8个商品
-              </td>
+              </td> -->
             </tr>
           </tbody>
         </table>
@@ -335,15 +336,15 @@ s.parentNode.insertBefore(yt, s);});</script>
           <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">品牌</div>
           <div class="pro_filter_wide-list-item-list settings-filterWide_border">
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" href="-size=12&ve=百龄坛特醇.htm"  title="百龄坛特醇"><i class="iconfont"></i>百龄坛特醇</a>
+            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="1" title="百龄坛特醇"><i class="iconfont"></i>百龄坛特醇</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" href="-size=12&ve=圣芝.htm"  title="圣芝"><i class="iconfont"></i>圣芝</a>
+            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="2" title="圣芝"><i class="iconfont"></i>圣芝</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" href="-size=12&ve=SKYY.htm" title="SKYY"><i class="iconfont"></i>SKYY</a>
+            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="3" title="SKYY"><i class="iconfont"></i>SKYY</a>
             
             <div class="pro_filter_wide-list-item-list-box" style="display: none;">
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" href="-size=12&ve=宝树行.htm"  title="宝树行"><i class="iconfont"></i>宝树行</a>
+            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="4" title="宝树行"><i class="iconfont"></i>宝树行</a>
             
             </div>
             
@@ -360,17 +361,17 @@ s.parentNode.insertBefore(yt, s);});</script>
           <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">类别</div>
           <div class="pro_filter_wide-list-item-list settings-filterWide_border">
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" href="-size=12&ty=红酒.htm"  title="红酒"><i class="iconfont"></i>红酒</a>
+            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="1"  name="type" title="红酒"><i class="iconfont"></i>红酒</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" href="-size=12&ty=鸡尾酒.htm"  title="鸡尾酒"><i class="iconfont"></i>鸡尾酒</a>
+            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="2"  name="type"  title="鸡尾酒"><i class="iconfont"></i>鸡尾酒</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" href="-size=12&ty=白兰地.htm"  title="白兰地"><i class="iconfont"></i>白兰地</a>
+            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="3"  name="type"  title="白兰地"><i class="iconfont"></i>白兰地</a>
             
             <div class="pro_filter_wide-list-item-list-box" style="display: none;">
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" href="-size=12&ty=威士忌.htm"  title="威士忌"><i class="iconfont"></i>威士忌</a>
+            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="4"  name="type"  title="威士忌"><i class="iconfont"></i>威士忌</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" href="-size=12&ty=伏特加.htm"  title="伏特加"><i class="iconfont"></i>伏特加</a>
+            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="5"  name="type""  title="伏特加"><i class="iconfont"></i>伏特加</a>
             
             </div>
             
@@ -405,22 +406,22 @@ s.parentNode.insertBefore(yt, s);});</script>
       <div class="proList-inner">
         
           <ul class="proList-ul clearfix proList-count-4 lazyload_scope">
+            <c:forEach var="pro" items="${page.list}" >
+        
             
+     		  <li>
+ 			 <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="${pro.proName}">
+    		<img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="${pro.picture}" alt="${pro.proName}" />
+    		
+  			</a>
+  			<a class="proList-name settings-proTitle_color txt-overflow" href="CocktailXQ.jsp"  title="${pro.proName}" target="_blank">${pro.proName}</a>
+  			<div class="proList-desc">
+    		<span class="proList-price settings-price_color">${pro.price}</span>
+  			</div>
+			</li>
+			</c:forEach>
             
-
-<li>
-  <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="洋酒Johnnie Walker">
-    <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/s_w330h330.png-v=1496739597.png"  alt="洋酒Johnnie Walker" />
-  </a>
-  <a class="proList-name settings-proTitle_color txt-overflow" href="p000008.htm"  title="洋酒Johnnie Walker" target="_blank">洋酒Johnnie Walker</a>
-  <div class="proList-desc">
-    <span class="proList-price settings-price_color">￥234.00</span>
-    
-  </div>
-</li>
-            
-            
-
+<!-- 
 <li>
   <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="洋酒组卡萨布莱克威士忌">
     <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/s_w330h330.png-v=1496739280.png"  alt="洋酒组卡萨布莱克威士忌" />
@@ -508,7 +509,7 @@ s.parentNode.insertBefore(yt, s);});</script>
     <span class="proList-price settings-price_color">￥388.00</span>
     
   </div>
-</li>
+</li> -->
             
           </ul>
         

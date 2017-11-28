@@ -88,7 +88,7 @@
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="products.jsp"  >在线商城</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="${pageContext.request.contextPath}/selected.html">在线商城</a>
     <!-- 二级菜单 -->
        
   </li>

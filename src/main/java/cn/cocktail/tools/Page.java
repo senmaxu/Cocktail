@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Page<T> {
-	public final Integer size = 5 ; 	
+	public final Integer size = 8 ; 	
 	private Integer index;
 	private Integer count;
 	private Integer total;
