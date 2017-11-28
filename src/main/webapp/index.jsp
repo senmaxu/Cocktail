@@ -119,7 +119,7 @@
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="products.jsp" >品种介绍</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="${pageContext.request.contextPath}/selected.html" >品种介绍</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -133,7 +133,7 @@
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="products.jsp"  >最新动态</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="${pageContext.request.contextPath}/selected.html" >最新动态</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -532,7 +532,7 @@ $(function(){
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="products.htm">在线商城</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html">在线商城</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -556,7 +556,7 @@ $(function(){
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="products.htm" >品种介绍</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html" >品种介绍</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -568,7 +568,7 @@ $(function(){
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="products.htm" >最新动态</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html">最新动态</a>
             <!-- 二级菜单 -->
             
           </li>

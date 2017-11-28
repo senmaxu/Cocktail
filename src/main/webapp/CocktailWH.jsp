@@ -85,7 +85,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="CocktailSP.jsp"  >在线商城</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="${pageContext.request.contextPath}/selected.html"  >在线商城</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -116,7 +116,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="CocktailSP.jsp" >品种介绍</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="${pageContext.request.contextPath}/selected.html" >品种介绍</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -130,7 +130,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="CocktailSP.jsp"  >最新动态</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="${pageContext.request.contextPath}/selected.html"  >最新动态</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -453,7 +453,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp">在线商城</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html">在线商城</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -465,7 +465,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp" >品牌介绍</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html" >品牌介绍</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -477,7 +477,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp" >品种介绍</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html" >品种介绍</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -489,7 +489,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp" >最新动态</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html">最新动态</a>
             <!-- 二级菜单 -->
             
           </li>

@@ -89,7 +89,7 @@ s.parentNode.insertBefore(yt, s);});</script>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="CocktailSP.jsp"  >在线商城</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="${pageContext.request.contextPath}/selected.html" >在线商城</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -120,7 +120,7 @@ s.parentNode.insertBefore(yt, s);});</script>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="CocktailSP.jsp" >品种介绍</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="${pageContext.request.contextPath}/selected.html">品种介绍</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -134,7 +134,7 @@ s.parentNode.insertBefore(yt, s);});</script>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="CocktailSP.jsp"  >最新动态</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551"href="${pageContext.request.contextPath}/selected.html"  >最新动态</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -209,7 +209,7 @@ s.parentNode.insertBefore(yt, s);});</script>
     <div class="pro_list_filter-pro--grid">
       <div class="pro_list_filter-pro-item">
         <div class="pro_list_filter-pro-item-name">品牌</div>
-        <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick">
+        <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick" method="post" action="${pageContext.request.contextPath }/selected.html">
           <option value="0"  name="brand" >不限</option>
           
           <option value="1"  name="brand" >百龄坛特醇</option>
@@ -228,7 +228,7 @@ s.parentNode.insertBefore(yt, s);});</script>
     <div class="pro_list_filter-pro--grid">
       <div class="pro_list_filter-pro-item">
         <div class="pro_list_filter-pro-item-name">类别</div>
-        <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick">
+        <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick" method="post" action="${pageContext.request.contextPath }/selected.html">
           <option value="0"  name="type" >不限</option>
           
           <option value="1"  name="type" >红酒</option>
@@ -305,12 +305,6 @@ s.parentNode.insertBefore(yt, s);});</script>
 <div class="pro_list_wrap">
   <div class="row clearfix pro_list_page--show_side">
     <div class="pro_list_page-side">
-      
-
-
-
-
-
 
   <div class="pro_filter_wide">
   
@@ -319,10 +313,10 @@ s.parentNode.insertBefore(yt, s);});</script>
         <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">排列方式</div>
         <div class="selecter">
         <span class="selecter-selected"><i class="iconfont"></i></span>
-          <div class="prolist-spfilter-cond selecter-options">
-            <a class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " href="-size=12&so=sale_desc.htm" >按销量</a>
-            <a class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-price settings-filterSelect_background settings-filterSelect_color " href="-size=12&so=price_desc.htm" >按价格</a>
-            <a class="selecter-item pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " href="-size=12&so=date_desc.htm" >按上架时间</a>
+          <div class="prolist-spfilter-cond selecter-options" method="post" action="${pageContext.request.contextPath }/selected.html" >
+            <a class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " name="sales" >按销量</a>
+            <a class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-price settings-filterSelect_background settings-filterSelect_color " name="price" >按价格</a>
+            <a class="selecter-item pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " name="uploadTime"  >按上架时间</a>
           </div>
         </div>
       </div><!-- .prolist-spfilter-inner -->
@@ -334,7 +328,7 @@ s.parentNode.insertBefore(yt, s);});</script>
       
         <div class="pro_filter_wide-list-item">
           <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">品牌</div>
-          <div class="pro_filter_wide-list-item-list settings-filterWide_border">
+          <div class="pro_filter_wide-list-item-list settings-filterWide_border" method="post" action="${pageContext.request.contextPath }/selected.html">
             
             <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="1" title="百龄坛特醇"><i class="iconfont"></i>百龄坛特醇</a>
             
@@ -359,7 +353,7 @@ s.parentNode.insertBefore(yt, s);});</script>
       
         <div class="pro_filter_wide-list-item">
           <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">类别</div>
-          <div class="pro_filter_wide-list-item-list settings-filterWide_border">
+          <div class="pro_filter_wide-list-item-list settings-filterWide_border" method="post" action="${pageContext.request.contextPath }/selected.html">
             
             <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="1"  name="type" title="红酒"><i class="iconfont"></i>红酒</a>
             
@@ -406,113 +400,19 @@ s.parentNode.insertBefore(yt, s);});</script>
       <div class="proList-inner">
         
           <ul class="proList-ul clearfix proList-count-4 lazyload_scope">
-            <c:forEach var="pro" items="${page.list}" >
-        
-            
+            <c:forEach var="pro" items="${page.list}" >    
      		  <li>
+     		  <input type="hidden" id="${pro.id}">
  			 <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="${pro.proName}">
-    		<img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="${pro.picture}" alt="${pro.proName}" />
-    		
+    		<img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="${pro.picture}" alt="${pro.proName}" />   		
   			</a>
   			<a class="proList-name settings-proTitle_color txt-overflow" href="CocktailXQ.jsp"  title="${pro.proName}" target="_blank">${pro.proName}</a>
   			<div class="proList-desc">
     		<span class="proList-price settings-price_color">${pro.price}</span>
   			</div>
 			</li>
-			</c:forEach>
-            
-<!-- 
-<li>
-  <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="洋酒组卡萨布莱克威士忌">
-    <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/s_w330h330.png-v=1496739280.png"  alt="洋酒组卡萨布莱克威士忌" />
-  </a>
-  <a class="proList-name settings-proTitle_color txt-overflow" href="p000007.htm"  title="洋酒组卡萨布莱克威士忌" target="_blank">洋酒组卡萨布莱克威士忌</a>
-  <div class="proList-desc">
-    <span class="proList-price settings-price_color">￥245.00</span>
-    
-  </div>
-</li>
-            
-            
-
-<li>
-  <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="苏格兰坛特醇威士忌">
-    <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/s_w330h330.png-v=1496739056.png"  alt="苏格兰坛特醇威士忌" />
-  </a>
-  <a class="proList-name settings-proTitle_color txt-overflow" href="p000006.htm"  title="苏格兰坛特醇威士忌" target="_blank">苏格兰坛特醇威士忌</a>
-  <div class="proList-desc">
-    <span class="proList-price settings-price_color">￥556.00</span>
-    
-  </div>
-</li>
-            
-            
-
-<li>
-  <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp" target="_blank" title="SKYY蓝天伏特加">
-    <img class="lazyload" src="image/blank.gif-v=150.gif" data-src="image/s_w330h330.png-v=1496739009.png"  alt="SKYY蓝天伏特加" />
-  </a>
-  <a class="proList-name settings-proTitle_color txt-overflow" href="p000005.htm"  title="SKYY蓝天伏特加" target="_blank">SKYY蓝天伏特加</a>
-  <div class="proList-desc">
-    <span class="proList-price settings-price_color">￥219.00</span>
-    
-  </div>
-</li>
-            
-            
-
-<li>
-  <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="百龄坛特醇苏格兰威士忌">
-    <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/s_w330h330.png-v=1496738908.png"  alt="百龄坛特醇苏格兰威士忌" />
-  </a>
-  <a class="proList-name settings-proTitle_color txt-overflow" href="p000004.htm"  title="百龄坛特醇苏格兰威士忌" target="_blank">百龄坛特醇苏格兰威士忌</a>
-  <div class="proList-desc">
-    <span class="proList-price settings-price_color">￥200.00</span>
-    
-  </div>
-</li>
-            
-            
-
-<li>
-  <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="宝树行 马爹利名士">
-    <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/s_w330h330.png-v=1496738754.png"  alt="宝树行 马爹利名士" />
-  </a>
-  <a class="proList-name settings-proTitle_color txt-overflow" href="p000003.htm"  title="宝树行 马爹利名士" target="_blank">宝树行 马爹利名士</a>
-  <div class="proList-desc">
-    <span class="proList-price settings-price_color">￥199.00</span>
-    
-  </div>
-</li>
-            
-            
-
-<li>
-  <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="百加得白朗姆酒">
-    <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/s_w330h330.png-v=1496738605.png"  alt="百加得白朗姆酒" />
-  </a>
-  <a class="proList-name settings-proTitle_color txt-overflow" href="p000002.htm"  title="百加得白朗姆酒" target="_blank">百加得白朗姆酒</a>
-  <div class="proList-desc">
-    <span class="proList-price settings-price_color">￥155.00</span>
-    
-  </div>
-</li>
-            
-            
-
-<li>
-  <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="圣芝红酒法国银奖干红">
-    <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/s_w330h330.png-v=1496736413.png" tppabs="http://asset.ibanquan.com/image/5936629d3f8f90099800027d/s_w330h330.png?v=1496736413" alt="圣芝红酒法国银奖干红" />
-  </a>
-  <a class="proList-name settings-proTitle_color txt-overflow" href="p000001.htm"  title="圣芝红酒法国银奖干红" target="_blank">圣芝红酒法国银奖干红</a>
-  <div class="proList-desc">
-    <span class="proList-price settings-price_color">￥388.00</span>
-    
-  </div>
-</li> -->
-            
-          </ul>
-        
+			</c:forEach> 
+          </ul>       
       </div>
     </div>
   </div>
@@ -526,28 +426,7 @@ s.parentNode.insertBefore(yt, s);});</script>
             <tr>
               <th>&nbsp;</th>
               <td class="prolist-spfilter-page prolist-spfilter-page-footer">
-                <!-- 
-
-
-<div class="prolist-spfilter-pagenation">
-  
-  <span class="prolist-spfilter-pagenation-status">
-    
-      <a class="settings-text_color selected" href="/products/?size=12&page=1">1</a>
-    
-  </span>
-  
-  
-  <a class="prolist-spfilter-pagenation-prev prolist-spfilter-pagenation-prev-disable settings-mainBtnDisabled_color settings-mainBtnDisabled_background" href="javascript:void(0);">&lt;</a>
-  
-
-  
-  <a class="prolist-spfilter-pagenation-next prolist-spfilter-pagenation-next-disable settings-mainBtnDisabled_color settings-mainBtnDisabled_background" href="javascript:void(0);">&gt;</a>
-  
-</div>
-
- -->
-
+       
 
               </td>
             </tr>
@@ -833,7 +712,7 @@ s.parentNode.insertBefore(yt, s);});</script>
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp">在线商城</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html">在线商城</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -845,7 +724,7 @@ s.parentNode.insertBefore(yt, s);});</script>
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp" >品牌介绍</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html" >品牌介绍</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -857,7 +736,7 @@ s.parentNode.insertBefore(yt, s);});</script>
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp" >品种介绍</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html" >品种介绍</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -869,7 +748,7 @@ s.parentNode.insertBefore(yt, s);});</script>
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp" >最新动态</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html">最新动态</a>
             <!-- 二级菜单 -->
             
           </li>
