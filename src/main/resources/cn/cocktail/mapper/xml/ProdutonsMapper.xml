@@ -16,14 +16,14 @@ and brand=#{brand}
 and type=#{type}
 </if>
 <if test="sales !=null and sales !=0 ">
-order by sales=#{sales} DESC
+order by sales DESC
 </if>
 
 <if test="price !=null and price !=0 ">
-order by price=#{price} DESC
+order by price DESC
 </if>
 <if test="uploadTime !=null and uploadTime !=0 ">
-order by uploadTime=#{uploadTime} DESC
+order by uploadTime DESC
 </if>
 </trim>
 LIMIT #{index},#{size} 
@@ -42,13 +42,13 @@ and brand=#{brand}
 and type=#{type}
 </if>
 <if test="sales !=null and sales !=0 ">
-order by sales=#{sales} DESC
+order by sales DESC
 </if>
 <if test="price !=null and price !=0 ">
-order by price=#{price} DESC
+order by price DESC
 </if>
 <if test="uploadTime !=null and uploadTime !=0 ">
-order by price=#{uploadTime} DESC
+order by price DESC
 </if>
 </trim>
 </select>

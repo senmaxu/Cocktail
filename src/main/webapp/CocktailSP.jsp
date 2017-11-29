@@ -185,7 +185,8 @@ s.parentNode.insertBefore(yt, s);});</script>
 
 
 <div class="pro_list_wrap wide_hide">
-  
+  	<input type="hidden" id="totalPageCount" value="${page.total}"/>
+    <input type="hidden" name="pageIndex" value="1">
   
   <div class="row mod">
     <div class="pageTitle txt_ellipsis clearfix settings-desc_color">
@@ -209,7 +210,7 @@ s.parentNode.insertBefore(yt, s);});</script>
     <div class="pro_list_filter-pro--grid">
       <div class="pro_list_filter-pro-item">
         <div class="pro_list_filter-pro-item-name">品牌</div>
-        <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick" method="post" action="${pageContext.request.contextPath }/selected.html">
+        <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick" >
           <option value="0"  name="brand" >不限</option>
           
           <option value="1"  name="brand" >百龄坛特醇</option>
@@ -228,7 +229,7 @@ s.parentNode.insertBefore(yt, s);});</script>
     <div class="pro_list_filter-pro--grid">
       <div class="pro_list_filter-pro-item">
         <div class="pro_list_filter-pro-item-name">类别</div>
-        <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick" method="post" action="${pageContext.request.contextPath }/selected.html">
+        <select class="pro_list_filter-pro-item-select settings-filterSelect_color dropkick" >
           <option value="0"  name="type" >不限</option>
           
           <option value="1"  name="type" >红酒</option>
@@ -271,10 +272,10 @@ s.parentNode.insertBefore(yt, s);});</script>
               <th class="prolist-spfilter-head settings-desc_color">排序：</th>
               <td>
                 <div class="prolist-spfilter-cond">
-                  <a  name="sales"  class=" settings-main_border settings-desc_color ">销量</a>
+                  <a  name="sales" class=" settings-main_border settings-desc_color ">销量</a>
                   
                     
-                      <a class="settings-main_border settings-desc_color"  name="price"  >价格↑</a>
+                      <a  class="settings-main_border settings-desc_color"  name="price"  >价格↑</a>
                     
                   
                   <a  name="uploadTime"  class=" settings-main_border settings-desc_color ">上架时间</a>
@@ -313,10 +314,10 @@ s.parentNode.insertBefore(yt, s);});</script>
         <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">排列方式</div>
         <div class="selecter">
         <span class="selecter-selected"><i class="iconfont"></i></span>
-          <div class="prolist-spfilter-cond selecter-options" method="post" action="${pageContext.request.contextPath }/selected.html" >
+          <div class="prolist-spfilter-cond selecter-options" >
             <a class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " name="sales" >按销量</a>
-            <a class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-price settings-filterSelect_background settings-filterSelect_color " name="price" >按价格</a>
-            <a class="selecter-item pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " name="uploadTime"  >按上架时间</a>
+            <a class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-price settings-filterSelect_background settings-filterSelect_color " name="price"  >按价格</a>
+            <a class="selecter-item pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " name="uploadTime" >按上架时间</a>
           </div>
         </div>
       </div><!-- .prolist-spfilter-inner -->
@@ -328,7 +329,7 @@ s.parentNode.insertBefore(yt, s);});</script>
       
         <div class="pro_filter_wide-list-item">
           <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">品牌</div>
-          <div class="pro_filter_wide-list-item-list settings-filterWide_border" method="post" action="${pageContext.request.contextPath }/selected.html">
+          <div class="pro_filter_wide-list-item-list settings-filterWide_border" >
             
             <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="1" title="百龄坛特醇"><i class="iconfont"></i>百龄坛特醇</a>
             
@@ -353,7 +354,7 @@ s.parentNode.insertBefore(yt, s);});</script>
       
         <div class="pro_filter_wide-list-item">
           <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">类别</div>
-          <div class="pro_filter_wide-list-item-list settings-filterWide_border" method="post" action="${pageContext.request.contextPath }/selected.html">
+          <div class="pro_filter_wide-list-item-list settings-filterWide_border" method="post" >
             
             <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="1"  name="type" title="红酒"><i class="iconfont"></i>红酒</a>
             
@@ -386,13 +387,67 @@ s.parentNode.insertBefore(yt, s);});</script>
 
 
 
-<script>
-  
 
-  
+
+
+
+
+
+
+
+<div class="row">
+					<div class="col-sm-5">
+						<div class="dataTables_info" id="datatable-responsive_info"
+							role="status" aria-live="polite">共${page.count }条记录
+							${page.index }/${page.total }页</div>
+					</div>
+					<div class="col-sm-7">
+						<div class="dataTables_paginate paging_simple_numbers"
+							id="datatable-responsive_paginate">
+							<ul class="pagination">
+								<c:if test="${page.index > 1}">
+									<li class="paginate_button previous"><a
+										href="javascript:page_nav(document.forms[0],1);"
+										aria-controls="datatable-responsive" data-dt-idx="0"
+										tabindex="0">首页</a>
+									</li>
+									<li class="paginate_button "><a
+										href="javascript:page_nav(document.forms[0],${page.index-1});"
+										aria-controls="datatable-responsive" data-dt-idx="1"
+										tabindex="0">上一页</a>
+									</li>
+								</c:if>
+								<c:if test="${page.index < page.total }">
+									<li class="paginate_button "><a
+										href="javascript:page_nav(document.forms[0],${page.index+1 });"
+										aria-controls="datatable-responsive" data-dt-idx="1"
+										tabindex="0">下一页</a>
+									</li>
+									<li class="paginate_button next"><a
+										href="javascript:page_nav(document.forms[0],${page.total });"
+										aria-controls="datatable-responsive" data-dt-idx="7"
+										tabindex="0">最后一页</a>
+									</li>
+								</c:if>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+<script>
 
 </script>
     </div>
+    
     <div class="pro_list_page-main">
       <div class="wrapper wrapper-proList">
   <div class="cont">
@@ -402,15 +457,18 @@ s.parentNode.insertBefore(yt, s);});</script>
           <ul class="proList-ul clearfix proList-count-4 lazyload_scope">
             <c:forEach var="pro" items="${page.list}" >    
      		  <li>
-     		  <input type="hidden" id="${pro.id}">
- 			 <a class="proList-img settings-proPic_border" href="CocktailXQ.jsp"  target="_blank" title="${pro.proName}">
-    		<img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="${pro.picture}" alt="${pro.proName}" />   		
+     		  
+ 			 <a  class="proList-img settings-proPic_border" href="SelectById.html?id=${pro.id }"   target="_blank" title="${pro.proName}">
+    		<img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="${pro.picture}" alt="${pro.proName}" />  
+    		 		
   			</a>
-  			<a class="proList-name settings-proTitle_color txt-overflow" href="CocktailXQ.jsp"  title="${pro.proName}" target="_blank">${pro.proName}</a>
+  			<a class="proList-name settings-proTitle_color txt-overflow" href="SelectById.html?id=${pro.id }"   title="${pro.proName}" target="_blank">${pro.proName}
+  			</a>
   			<div class="proList-desc">
     		<span class="proList-price settings-price_color">${pro.price}</span>
   			</div>
 			</li>
+			
 			</c:forEach> 
           </ul>       
       </div>
@@ -443,6 +501,16 @@ s.parentNode.insertBefore(yt, s);});</script>
 
 
 <script>
+
+
+$(".viewApp").on("click",function(){
+	var obj = $(this);
+	window.location.href="infoview.html?method=view&id="+ obj.attr("appinfoid");
+});
+
+
+
+
   $(document).ready(function(){
 
     // 商品筛选

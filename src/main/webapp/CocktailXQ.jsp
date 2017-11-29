@@ -15,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="dns-prefetch" href="//asset.ibanquan.com">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
-    <title>百加得白朗姆酒</title>
+    <title>商品信息</title>
     <meta name="keywords" content="">
     <meta name="description" content="Cocktails">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
@@ -31,13 +31,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script src="js/jquery-1.11.3.min.js-v=150.js"  type='text/javascript'></script>
     <script src="js/jssdk-0.0.18.min.js-v=150.js" type='text/javascript'></script>
     <script src="js/lazyload.min.js-v=150.js"  type='text/javascript'></script>
+      <script src="js/jquery-1.4.2.min.js"  type='text/javascript'></script>
+        <script src="js/jquery.imagezoom.min.js"  type='text/javascript'></script>
 
     <!-- 社交分享信息 -->
 
 
 
-  <meta property="og:title" content="百加得白朗姆酒" />
-  <meta property="og:description" content="青丹" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
   <meta property="og:image" content="//asset.ibanquan.com/image/57acb53a02282e3f00000007/s.png?v=0" />
 
   <!-- End 社交分享信息 -->
@@ -85,7 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="CocktailSP.jsp"  >在线商城</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="${pageContext.request.contextPath}/selected.html"  >在线商城</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -116,7 +118,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="CocktailSP.jsp" >品种介绍</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="${pageContext.request.contextPath}/selected.html" >品种介绍</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -130,7 +132,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="CocktailSP.jsp"  >最新动态</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="${pageContext.request.contextPath}/selected.html"  >最新动态</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -163,7 +165,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <div class="cont">
     <div class="mod breadcrumb">
       <div class="breadcrumb-inner settings-text_color txt-overflow">
-        <a class="settings-link_color" href="index.jsp"  title="青丹">首页</a><span class="breadcrumb-split">&gt;</span><a class="settings-link_color" href="index-1.htm" tppabs="http://qingdan.theme.yurl.vip/products/" title="所有商品">所有商品</a><span class="breadcrumb-split">&gt;</span><span class="breadcrumb-current">百加得白朗姆酒</span>
+        <a class="settings-link_color" href="index.jsp"  title="青丹">首页</a><span class="breadcrumb-split">&gt;</span><a class="settings-link_color" href="${pageContext.request.contextPath}/selected.html"  title="所有商品">所有商品</a><span class="breadcrumb-split">&gt;</span><span class="breadcrumb-current">${productions.proName}</span>
       </div>
     </div>
   </div>
@@ -176,11 +178,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="pro-detail-left">
           <div class="pro-detail-gallery clearfix">
             <div class="pro-detail-gallery-main settings-proPic_border">
-              <a href="javascript:if(confirm(%27http://asset.ibanquan.com/image/59366b2d0dd76c6cc70002c9/s.png?v=1496738605  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://asset.ibanquan.com/image/59366b2d0dd76c6cc70002c9/s.png?v=1496738605%27" tppabs="http://asset.ibanquan.com/image/59366b2d0dd76c6cc70002c9/s.png?v=1496738605" data-zoom-image="//asset.ibanquan.com/image/59366b2d0dd76c6cc70002c9/s.png?v=1496738605">
-                <img src="image/s_w453h453.png-v=1496738605.png"  alt="百加得白朗姆酒" />
+              <a href="${productions.picture}">
+                <img src="${productions.picture}"  alt="${productions.proName}" class="jqzoom"/>
                 <span></span>
               </a>
-              
                 
               
             </div>
@@ -190,12 +191,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <!-- 产品规格选择 Start -->
         <div class="pro-detail-cnt settings-text_color you_comment-target-stat" id="yhsd_variantSelector" data-variantId="0">
-          <h1 class="pro-detail-title settings-proTitle_color">百加得白朗姆酒</h1>
+          <h1 class="pro-detail-title settings-proTitle_color">${productions.proName}</h1>
           
-          <div class="pro-detail-short_desc settings-desc_color">正品进口洋酒百加得白朗姆酒超级白朗姆酒烘培 鸡尾酒基酒bacardi<br/>喝前冰镇，咨询客服赠鸡尾酒配方</div>
+          <div class="pro-detail-short_desc settings-desc_color">${productions.info}</div>
           
           <div class="pro-detail-desc" id="yhsd_productDiscount"></div>
-          <div class="pro-detail-price"><strong class="pro-detail-uprice settings-price_color">￥<span id="yhsd_variantSelector_price">155.00</span></strong><span class="pro-detail-sold">已售出<span id="yhsd_variantSelector_sale">0</span>件</span></div>
+          <div class="pro-detail-price"><strong class="pro-detail-uprice settings-price_color">￥<span id="yhsd_variantSelector_price">${productions.price}</span></strong><span class="pro-detail-sold">已售出<span id="yhsd_variantSelector_sale">${productions.sales}</span>件</span></div>
           <div class="pro-detail-sub settings-blogs_border" id="yhsd_variantSelector_optionShow"></div>
           <div class="pro-detail-quantity">
             <h3>选择数量</h3>
@@ -203,7 +204,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               <a class="pro-detail-quantity-d settings-main_border settings-desc_color" href="javascript:void(0);" id="yhsd_variantSelector_reduce">-</a>
               <a class="pro-detail-quantity-a settings-main_border settings-desc_color" href="javascript:void(0);" id="yhsd_variantSelector_add">+</a>
               <input class="pro-detail-quantity-ipt settings-main_border" type="text" value="1" id="yhsd_variantSelector_count" />
-              <div class="pro-detail-quantity-desc">件<span>（库存<span id="yhsd_variantSelector_stock">245</span>件）</span></div>
+              <div class="pro-detail-quantity-desc">件<span>（库存<span id="yhsd_variantSelector_stock">${productions.rumCount}</span>件）</span></div>
             </div>
           </div>
           <div class="pro-detail-addBtn">
@@ -239,7 +240,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
   // 当前商品
-  window.CurrentProduct = {"page_desc":"","price":15500,"options":[],"images":[{"image_id":"59366b2d0dd76c6cc70002c9","id":"59366b2d0dd76c6cc70002c9","image_name":"web.png"/*tpa=http://qingdan.theme.yurl.vip/products/web.png*/,"name":"web.png"/*tpa=http://qingdan.theme.yurl.vip/products/web.png*/,"image_epoch":"1496738605","epoch":"1496738605","width":500,"height":500,"alt":"","position":1,"src":"http://asset.ibanquan.com/image/59366b2d0dd76c6cc70002c9/s.png?v=1496738605"}],"content_id":"593667a40dd76c6cc3000310","created_at":"2017-06-06 16:28:20 +0800","feature_image":{"id":"59366b2d0dd76c6cc70002c9","image_id":"59366b2d0dd76c6cc70002c9","image_name":"web.png"/*tpa=http://qingdan.theme.yurl.vip/products/web.png*/,"name":"web.png"/*tpa=http://qingdan.theme.yurl.vip/products/web.png*/,"image_epoch":"1496738605","epoch":"1496738605","alt":"","position":1,"src":"http://asset.ibanquan.com/image/59366b2d0dd76c6cc70002c9/s.png?v=1496738605","width":500,"height":500},"short_desc":"正品进口洋酒百加得白朗姆酒超级白朗姆酒烘培 鸡尾酒基酒bacardi\u003cbr/\u003e喝前冰镇，咨询客服赠鸡尾酒配方","page_keywords":"","metas":{"product_attributes":{}},"mobile_content_html":"","share_desc":"","mobile_html_id":"","compare_price_min":0,"price_min":15500,"compare_price_varies":false,"page_url":"/products/p000002","compare_price_max":0,"content":"593667a40dd76c6cc3000310","price_varies":false,"page_title":"百加得白朗姆酒","share_title":"","id":969774,"variants":[{"id":4530226,"option_1":"","option_2":"","option_3":"","stock":245,"price":15500,"compare_price":0,"weight":0,"volume":0,"barcode":"","stock_type":"B","options":[],"metas":{},"sale":0,"feature_image":null}],"price_max":15500,"available":true,"handle":"p000002","share_image":{},"sale":0,"vendor":{"name":"圣芝","sub_name":"","handle":"v000001","introduce":"","page_title":"","page_keywords":"","page_desc":"","page_url":"/vendors/v000001","share_title":"","share_desc":"","share_image":{},"image":{}},"content_html":"","types":[{"handle":"t000002","name":"鸡尾酒"}],"name":"百加得白朗姆酒"};
+ 
   // LightBox 设置（解决 IE7-8 BUG 用 setTimeout）
   setTimeout(function() {
     try {
@@ -258,48 +259,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       delete Array.prototype.forEach;
     }
   }, 0);
-  // 鼠标放大镜
-  $(document).ready(function() {
-    var env, elevateZoomOpt, setElevateZoom;
-    env = {
-      ie8: !document.addEventListener
-    }
-    bIsMobile = $('body').hasClass('is_mobile');
-    if (!bIsMobile && !env.ie8) {
-      elevateZoomOpt = {
-        zoomWindowWidth: 453,
-        zoomWindowHeight: 453 - 1,
-        zoomWindowOffetx: 10,
-        zoomWindowOffety: 0,
-        zoomEnabled: true,
-        borderSize: 1,
-        borderColour: "#ccc",
-        lensBorderColour: "#aaa",
-        cursor: "crosshair"
-      }
-      elevateZoomOpt.onZoomedImageLoaded = function() {
-        var size = $('.zoomWindowContainer .zoomWindow').css('background-size').replace(/px/g, '').split(' ');
-        if (size[0] <= elevateZoomOpt.zoomWindowWidth || size[1] <= elevateZoomOpt.zoomWindowHeight) {
-          $('.zoomContainer').remove();
-        }
-      }
-      setElevateZoom = function() {
-        $('.zoomContainer').remove();
-        $('.pro-detail-gallery-main > a:visible').elevateZoom(elevateZoomOpt);
-      }
-      yhsd.ready(function(sdk){
-        sdk.events.subscribe('variantSelector.featureImage', function(){
-          setElevateZoom();
-        });
-      });
-      setTimeout(function(){
-        $('.pro-detail-gallery-list > a').on('mouseenter', function(evt) {
-          setElevateZoom();
-        });
-        setElevateZoom();
-      }, 500);
-    };
-  });
+  
+  
+  
+  
+  $(document).ready(function(){
+
+		$(".jqzoom").imagezoom();
+		
+
+	});
+
+  
+  
+  
+  
+  
+  
+  
+
 </script>
 
 <style>
@@ -495,7 +473,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp">在线商城</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html">在线商城</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -507,7 +485,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp" >品牌介绍</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html" >品牌介绍</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -519,7 +497,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp" >品种介绍</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html" >品种介绍</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -531,7 +509,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="CocktailSP.jsp" >最新动态</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html" >最新动态</a>
             <!-- 二级菜单 -->
             
           </li>
