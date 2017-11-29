@@ -67,9 +67,9 @@
             <div class="cont">
                 <div class="mod nav">
                     <div class="top-left">
-                        <a id="customer-item1" class="header-link iconfont icon-ziyuan settings-top_color" href="login.htm" ></a>
+                        <a id="customer-item1" class="header-link iconfont icon-ziyuan settings-top_color" href="Login.jsp" ></a>
                     </div>
-                    <a class="logo-link settings-h1_color pc-show" href="index.htm"  >
+                    <a class="logo-link settings-h1_color pc-show" href="index.jsp"  >
                         
                         <img src="image/logo-v=1496994301.png"  alt="Cocktails"/>
                         
@@ -88,21 +88,21 @@
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="${pageContext.request.contextPath}/selected.html">在线商城</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957545" href="${pageContext.request.contextPath}/selected.html" >在线商城</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957546" href="g000007.jsp" >品酒文化</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957546" href="CocktailWH.jsp" >品酒文化</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957547" href="blogs.jsp"  >品牌介绍</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957547" href="Blogs.jsp"  >品牌介绍</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -112,28 +112,28 @@
 
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957548" href="g000003.jsp"  >联系我们</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957548" href="CocktailCallMe.jsp"  >联系我们</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="${pageContext.request.contextPath}/selected.html" >品种介绍</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957549" href="${pageContext.request.contextPath}/selected.html">品种介绍</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957550" href="blogs.jsp"  >博客</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957550" href="Blogs.jsp"  >博客</a>
     <!-- 二级菜单 -->
        
   </li>
   
 
     <li>
-    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551" href="${pageContext.request.contextPath}/selected.html" >最新动态</a>
+    <a class="txt-overflow settings-navLink_color settings-nav_border settings-navLinkHover_border" id="navlink_957551"href="${pageContext.request.contextPath}/selected.html"  >最新动态</a>
     <!-- 二级菜单 -->
        
   </li>
@@ -145,7 +145,7 @@
                         <span class="main-ico main-ico-search iconfont icon-sousuo"></span>
                     </a>
                     <div id="yhsd-header-search-ipt" class="header-search">
-                        <input class="search-ipt settings-ipt_border" type="text" placeholder="搜索全店" />
+                        <input class="search-ipt settings-ipt_border" type="text" placeholder="搜索全店" name="" />
                     </div>
                     <div id="yhsd_topCart_show" class="header-cart">
                         <span class="main-ico main-ico-cart icon-gouwuche iconfont"></span><span class="topCart-quantity settings-top_color" id="yhsd_topCart_quantityTitle"></span>
@@ -526,7 +526,7 @@ $(function(){
         <ul class="nav-link clearfix">
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="index.htm" >首页</a>
+            <a class="txt-overflow settings-navLink_color" href="index.jsp" >首页</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -538,19 +538,19 @@ $(function(){
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="g000007.htm" >品酒文化</a>
+            <a class="txt-overflow settings-navLink_color" href="CocktailWH.jsp" >品酒文化</a>
             <!-- 二级菜单 -->
             
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="blogs.htm" >品牌介绍</a>
+            <a class="txt-overflow settings-navLink_color" href="${pageContext.request.contextPath}/selected.html" >品牌介绍</a>
             <!-- 二级菜单 -->
             
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="g000003.htm" >联系我们</a>
+            <a class="txt-overflow settings-navLink_color" href="CocktailCallMe.jsp" >联系我们</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -562,7 +562,7 @@ $(function(){
           </li>
           
           <li>
-            <a class="txt-overflow settings-navLink_color" href="blogs.htm" >博客</a>
+            <a class="txt-overflow settings-navLink_color" href="Blogs.jsp" >博客</a>
             <!-- 二级菜单 -->
             
           </li>
@@ -575,6 +575,7 @@ $(function(){
           
         </ul>
       </div>
+
 
  	<!-- -->  
     </div>
