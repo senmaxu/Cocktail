@@ -4,8 +4,6 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie6 settings-main_background"> <![endif]-->
 <!--[if IE 7 ]> <html class="ie7 settings-main_background"> <![endif]-->
@@ -33,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script src="js/jquery-1.11.3.min.js-v=150.js"  type='text/javascript'></script>
     <script src="js/jssdk-0.0.18.min.js-v=150.js" type='text/javascript'></script>
     <script src="js/lazyload.min.js-v=150.js"  type='text/javascript'></script>
-      <link href="css/style.css"  type='text/css' />
+    <link href="css/style.css"  type='text/css' />
 
     <!-- 社交分享信息 -->
 
@@ -170,33 +168,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="wrapper log-block-outer">
             <div class="cont log-block-inner">
                 <div class="log-block">
-                    <h4 class="yhsd-font-title">登录</h4>
-                       
-              <form class="loginForm" action="Login.html"  name="actionForm" id="actionForm"  method="post" >
-				
-				<div class="info">${error }</div>
-				<div class="inputbox" style="color: black">
-                    <label for="user">用户名：</label>
-					<input type="text" class="input-text" value="${user.password }"  name="userCode" placeholder="请输入用户名" required/>
-				</div>	<br/>
-				<div class="inputbox" style="color: black">
-                    <label for="mima">密&nbsp; &nbsp;码：</label>
-                    <input type="password"  name="password" value="${user.userCode }" placeholder="请输入密码" required/>
-                </div>	<br/>
-				<div class="subBtn">
-					
-                    <input type="submit" value="登录" class="btn btn-primary btn-lg btn-block"/><br/>
-                    <input type="reset" value="重置" class="btn btn-primary btn-lg btn-block"/><br/>
-                </div>	
-			</form>
+                    <h4 class="yhsd-font-title">注册</h4>
+
+                        <form class="loginForm" id="" action="register.html" method="post">
+                           <center>
+                           <div class="info">${error }</div>
+                            <div class="inputbox" data-state="">
+                                 <lable class="title" style="color: black" >&nbsp;用&nbsp;户&nbsp;名 :</lable> 
+                                      <input class="input yhsd-font-text" type="text" name="userCode" placeholder="请输入用户名" required maxlength="200"/>
+                                     <div class="tips"></div>
+                            </div><br/>                           
+                            <div class="inputbox" data-state="">
+                                  <lable class="title" style="color: black">登录密码 :</lable>
+                                     <input class="input yhsd-font-text" type="password" name="password" maxlength="40" placeholder="请输入密码" required/>
+                                  <div class="tips"></div>
+                              </div><br/>
+                              <div class="inputbox" data-state="">
+                                  <lable class="title" style="color: black">确认密码 :</lable>
+                                     <input class="input yhsd-font-text" type="password" name="rpassword" maxlength="40" placeholder="请确认密码" required/>
+                                  <div class="tips"></div>
+                              </div><br/>
+                              </center>
                             <div class="rapid">
-                                 <a class="yhsd-font-link" href="register.jsp">注册</a>
-                                 <a href="mima.jsp" class="forget yhsd-font-link">忘记密码</a>
+                                 <!-- <a class="yhsd-font-link" href="register.jsp">注册</a>
+                                 <a href="mima.jsp" class="forget yhsd-font-link">忘记密码</a> -->
                             </div>
-                        <!--  <button id="yhsd-login-submit" class="btn btn-primary btn-lg btn-block" type="submit">登录</button> -->
-                       <!--  </form>
- -->
-                    <div class="social-login">  <div><span class="yhsd-font-text">社交账号登录</span></div>
+                         <button id="yhsd-login-submit" class="btn btn-primary btn-lg btn-block" type="submit">注册</button>
+                        </form>
+
+                    <div class="social-login">  
+                    <!-- <div><span class="yhsd-font-text">社交账号登录</span></div>
                         <ul>
 
                     <li><a href="https://youhaosuda.com/api/auth?type=weixin&amp;from=http%3A%2F%2Fqingdan.theme.yurl.vip" class="icon-weixin-round"><span>微信登录</span></a>
@@ -217,7 +218,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 <a href="https://youhaosuda.com/api/auth?type=renren" class="icon-renren-round"><span>人人登录</span></a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
