@@ -37,4 +37,10 @@ public class ProdutionsServiceImpl implements ProductonsService {
 		return productonsMapper.findProductions(id);
 	}
 
+
+	public List<Productions> findBysales() {
+		// TODO Auto-generated method stub
+		return productonsMapper.findBysales();
+	}
+
 }

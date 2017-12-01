@@ -38,9 +38,10 @@ public class ProductionsController {
 		map.put("index", 1);
 		map.put("index", 8);
 		Page<Productions> page=productonsService.findByPage(map);
-		
-		System.out.println(page.getList());
-	
+		List<Productions> list=page.getList();
+		for (Productions productions : list) {
+			System.out.println(productions.getId());
+		}
 		model.addAttribute("page",page);
 		
 		return "CocktailSP";
@@ -49,15 +50,15 @@ public class ProductionsController {
 	/**
 	 * 页面模糊查询
 	 */
-	@RequestMapping(value = "selected.html", method = RequestMethod.POST)
+	@RequestMapping(value = "select.html", method = RequestMethod.GET)
 	public String BillShow(
 			Model model,
 			@RequestParam(value = "pageIndex", required = false) String pageIndex,
 			@RequestParam(value = "type", required = false) String type,
 			@RequestParam(value = "brand", required = false) String brand,
-			@RequestParam(value = "sales", required = false) String sales,
-			@RequestParam(value = "paice", required = false) String paice,
-			@RequestParam(value = "uploadTime", required = false) String uploadTime,
+			@RequestParam(value = "sales", required = false) Integer sales,
+			@RequestParam(value = "price", required = false) Integer price,
+			@RequestParam(value = "uploadTime", required = false) Integer uploadTime,
 			@RequestParam(value = "method", required = false) String method) {
 	System.out.println("54as4df5"
 			+ "asd5f"
@@ -73,26 +74,31 @@ public class ProductionsController {
 		if (type != null && !"".equals(type)) {
 			map.put("type", type);
 		}
-		if (brand != null && !"".equals(brand) && !"0".equals(brand)) {
+		if (brand != null && !"".equals(brand) && !"".equals(brand)) {
 			map.put("brand", brand);
 		}
-		if (sales != null && !"".equals(sales) && !"0".equals(sales)) {
+		if (sales != null && !"".equals(sales) && !"1".equals(sales)) {
 			map.put("sales", sales);
+			System.out.println("-11----------1-1-1");
 		}
-		if (paice != null && !"".equals(paice) && !"0".equals(paice)) {
-			map.put("paice", paice);
+		if (price != null && !"".equals(price) && !"2".equals(price)) {
+			map.put("price", price);
 		}
-		if (uploadTime != null && !"".equals(uploadTime) && !"0".equals(uploadTime)) {
+		if (uploadTime != null && !"".equals(uploadTime) && !"3".equals(uploadTime)) {
 			map.put("uploadTime", uploadTime);
 		}	
-
+		
 		map.put("index", pageIndex);
-		map.put("size", 5);
+		map.put("size", 8);
 		Page<Productions>page=productonsService.findByPage(map);
+		List<Productions> list=page.getList();
+		for (Productions productions : list) {
+			System.out.println(productions.getId());
+		}
 		model.addAttribute("type", map.get("type"));
 		model.addAttribute("brand", map.get("brand"));	
 		model.addAttribute("sales", map.get("sales"));	
-		model.addAttribute("paice", map.get("paice"));	
+		model.addAttribute("price", map.get("price"));	
 		model.addAttribute("uploadTime", map.get("uploadTime"));	
 		model.addAttribute("page", page);
 		return "CocktailSP";
@@ -113,8 +119,25 @@ public class ProductionsController {
 		System.out.println("jinlaile");
 		Productions productions =productonsService.findProductions(Integer.parseInt(id));
 		model.addAttribute("productions", productions);
-		return "CocktailXQ";
-		
+		return "CocktailXQ";		
 }
+
+	
+	
+/*	@RequestMapping(value = "xl.html", method = RequestMethod.GET)
+	public String showPx(Model model) {
+
+	System.out.println("54as4df5"
+			+ "asd5f"
+			+ "as4d"
+			+ "fsa5d"
+			+ "f54sad"
+			+ "f45asdf"
+			+ "4");
+		List<Productions> list=productonsService.findBysales();
+		System.out.println("askdfjk");
+		model.addAttribute("page",list);		
+		return "CocktailSP";
+	}*/
 }
  

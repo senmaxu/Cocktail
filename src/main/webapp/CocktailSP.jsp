@@ -272,13 +272,13 @@ s.parentNode.insertBefore(yt, s);});</script>
               <th class="prolist-spfilter-head settings-desc_color">排序：</th>
               <td>
                 <div class="prolist-spfilter-cond">
-                  <a  name="sales" class=" settings-main_border settings-desc_color ">销量</a>
+                  <a href="${pageContext.request.contextPath }/select.html?sales=1" name="sales" class=" settings-main_border settings-desc_color ">销量11111</a>
                   
                     
-                      <a  class="settings-main_border settings-desc_color"  name="price"  >价格↑</a>
+                    <a href="${pageContext.request.contextPath }/select.html?price=2" class="settings-main_border settings-desc_color"  name="price"  >价格↑</a>
                     
                   
-                  <a  name="uploadTime"  class=" settings-main_border settings-desc_color ">上架时间</a>
+                  <a href="${pageContext.request.contextPath }/select.html?uploadTime=3" name="uploadTime"  class=" settings-main_border settings-desc_color ">上架时间</a>
 <!--                   <label class="prolist-spfilter-cond-chk settings-desc_color" onclick="window.location.href='-size=12&ex=1.htm'/*tpa=http://qingdan.theme.yurl.vip/products/?size=12&ex=1*/"><input type="checkbox" />仅显示有货</label> -->
                 </div>
               </td>
@@ -315,9 +315,9 @@ s.parentNode.insertBefore(yt, s);});</script>
         <div class="selecter">
         <span class="selecter-selected"><i class="iconfont"></i></span>
           <div class="prolist-spfilter-cond selecter-options" >
-            <a class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " name="sales" >按销量</a>
-            <a class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-price settings-filterSelect_background settings-filterSelect_color " name="price"  >按价格</a>
-            <a class="selecter-item pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " name="uploadTime" >按上架时间</a>
+             <!-- id="viewApp" appinfoid="1" --><a href="${pageContext.request.contextPath }/select.html?sales=1" class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " name="sales" >按销量</a>
+            <a href="${pageContext.request.contextPath }/select.html?price=2" class="selecter-item  pro_list_filter-order-item-each pro_list_filter-order-item-price settings-filterSelect_background settings-filterSelect_color " name="price"  >按价格</a>
+            <a  href="${pageContext.request.contextPath }/select.html?uploadTime=3" class="selecter-item pro_list_filter-order-item-each pro_list_filter-order-item-time settings-filterSelect_background settings-filterSelect_color " name="uploadTime" >按上架时间</a>
           </div>
         </div>
       </div><!-- .prolist-spfilter-inner -->
@@ -331,15 +331,15 @@ s.parentNode.insertBefore(yt, s);});</script>
           <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">品牌</div>
           <div class="pro_filter_wide-list-item-list settings-filterWide_border" >
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="1" title="百龄坛特醇"><i class="iconfont"></i>百龄坛特醇</a>
+            <a href="${pageContext.request.contextPath }/select.html?brand=1"  class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="1" title="百龄坛特醇"><i class="iconfont"></i>百龄坛特醇</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="2" title="圣芝"><i class="iconfont"></i>圣芝</a>
+            <a href="${pageContext.request.contextPath }/select.html?brand=2" class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="2" title="圣芝"><i class="iconfont"></i>圣芝</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="3" title="SKYY"><i class="iconfont"></i>SKYY</a>
+            <a href="${pageContext.request.contextPath }/select.html?brand=3" class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="3" title="SKYY"><i class="iconfont"></i>SKYY</a>
             
             <div class="pro_filter_wide-list-item-list-box" style="display: none;">
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="4" title="宝树行"><i class="iconfont"></i>宝树行</a>
+            <a href="${pageContext.request.contextPath }/select.html?brand=4" class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" name="brand" value="4" title="宝树行"><i class="iconfont"></i>宝树行</a>
             
             </div>
             
@@ -356,17 +356,17 @@ s.parentNode.insertBefore(yt, s);});</script>
           <div class="pro_filter_wide-list-item-title settings-filterWide_border txt_ellipsis">类别</div>
           <div class="pro_filter_wide-list-item-list settings-filterWide_border" method="post" >
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="1"  name="type" title="红酒"><i class="iconfont"></i>红酒</a>
+            <a href="${pageContext.request.contextPath }/select.html?type=1" class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="1"  name="type" title="红酒"><i class="iconfont"></i>红酒</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="2"  name="type"  title="鸡尾酒"><i class="iconfont"></i>鸡尾酒</a>
+            <a href="${pageContext.request.contextPath }/select.html?type=2" class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="2"  name="type"  title="鸡尾酒"><i class="iconfont"></i>鸡尾酒</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="3"  name="type"  title="白兰地"><i class="iconfont"></i>白兰地</a>
+            <a href="${pageContext.request.contextPath }/select.html?type=3" class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="3"  name="type"  title="白兰地"><i class="iconfont"></i>白兰地</a>
             
             <div class="pro_filter_wide-list-item-list-box" style="display: none;">
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="4"  name="type"  title="威士忌"><i class="iconfont"></i>威士忌</a>
+            <a href="${pageContext.request.contextPath }/select.html?type=4" class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="4"  name="type"  title="威士忌"><i class="iconfont"></i>威士忌</a>
             
-            <a class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="5"  name="type""  title="伏特加"><i class="iconfont"></i>伏特加</a>
+            <a href="${pageContext.request.contextPath }/select.html?type=5" class="pro_filter_wide-list-item-list-each settings-filterWide_color txt_ellipsis" value="5"  name="type""  title="伏特加"><i class="iconfont"></i>伏特加</a>
             
             </div>
             
@@ -456,11 +456,9 @@ s.parentNode.insertBefore(yt, s);});</script>
         
           <ul class="proList-ul clearfix proList-count-4 lazyload_scope">
             <c:forEach var="pro" items="${page.list}" >    
-     		  <li>
-     		  
+     		  <li>  
  			 <a  class="proList-img settings-proPic_border" href="SelectById.html?id=${pro.id }"   target="_blank" title="${pro.proName}">
-    		<img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="${pro.picture}" alt="${pro.proName}" />  
-    		 		
+    		<img class="lazyload" src="${pro.picture}"   alt="${pro.proName}" />   		 		
   			</a>
   			<a class="proList-name settings-proTitle_color txt-overflow" href="SelectById.html?id=${pro.id }"   title="${pro.proName}" target="_blank">${pro.proName}
   			</a>
@@ -474,8 +472,10 @@ s.parentNode.insertBefore(yt, s);});</script>
       </div>
     </div>
   </div>
-</div><!-- .m-active --> 
-      <div class="wrapper">
+</div>
+
+<!-- .m-active --> 
+ <div class="wrapper">
   <div class="cont">
     <div class="mod prolist-spfilter">
       <div class="prolist-spfilter-inner">
@@ -501,14 +501,14 @@ s.parentNode.insertBefore(yt, s);});</script>
 
 
 <script>
+/* 
 
-
-$(".viewApp").on("click",function(){
+$("#viewApp").on("click",function(){
 	var obj = $(this);
-	window.location.href="infoview.html?method=view&id="+ obj.attr("appinfoid");
+	window.location.href="selected.html?method=view&sales="+ obj.attr("appinfoid");
 });
 
-
+ */
 
 
   $(document).ready(function(){

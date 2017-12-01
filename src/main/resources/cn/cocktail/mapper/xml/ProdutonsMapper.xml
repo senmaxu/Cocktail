@@ -6,51 +6,31 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <select id="findByPage" resultType="Productions">
 SELECT id, ProName,picture,price from productions
  <trim prefix="where" prefixOverrides="and | or">
-<if test="ProName != null and ProName != ''">
-and ProName LIKE CONCAT('%',#{ProName},'%') 
-</if> 
-<if test="brand !=null and brand!=0 ">
-and brand=#{brand}
-</if>
-<if test="type !=null and type !=0 ">
-and type=#{type}
-</if>
-<if test="sales !=null and sales !=0 ">
-order by sales DESC
-</if>
-
-<if test="price !=null and price !=0 ">
-order by price DESC
-</if>
-<if test="uploadTime !=null and uploadTime !=0 ">
-order by uploadTime DESC
-</if>
+	<if test="ProName != null and ProName != ''">
+	and ProName LIKE CONCAT('%',#{ProName},'%') 
+	</if> 
+	 <if test="brand !=null and brand!=0 ">
+	and brand=#{brand}
+	</if>
+	<if test="type !=null and type !=0 ">
+	and type=#{type}
+	</if> 
 </trim>
+ <if test="sales !=null ">
+	order by sales DESC
+	</if>
+	
+	<if test="price !=null  ">
+	order by price DESC
+	</if>
+	<if test="uploadTime !=null  ">
+	order by uploadTime DESC
+	</if>
 LIMIT #{index},#{size} 
 </select>
  
 <select id="countByPage" resultType="Integer" parameterType="hashmap">
 select count(*) as count from productions
- <trim prefix="where" prefixOverrides="and | or">
-<if test="ProName != null and ProName != ''">
-and ProName LIKE CONCAT('%',#{ProName},'%') 
-</if> 
-<if test="brand !=null and brand!=0 ">
-and brand=#{brand}
-</if>
-<if test="type !=null and type !=0 ">
-and type=#{type}
-</if>
-<if test="sales !=null and sales !=0 ">
-order by sales DESC
-</if>
-<if test="price !=null and price !=0 ">
-order by price DESC
-</if>
-<if test="uploadTime !=null and uploadTime !=0 ">
-order by price DESC
-</if>
-</trim>
 </select>
 
 

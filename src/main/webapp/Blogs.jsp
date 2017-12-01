@@ -182,7 +182,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             
             <div class="blogs-item-music">
               <a class="blogs-item-music-cover" title="很靠近海" href="b000005.htm" >
-                <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/604731395317940.jpg" alt="很靠近海">
+                <img class="lazyload" src="image/604731395317940.jpg"  alt="很靠近海">
               </a>
               <a class="blogs-item-music-name settings-text_color" href="b000005.htm"  title="很靠近海">很靠近海</a>
               <div title="逆光飞翔 电影原声带 - 黄裕翔" class="blogs-item-music-info settings-blog_desc_color">逆光飞翔 电影原声带 - 黄裕翔</div>
@@ -207,7 +207,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             
             <div class="blogs-item-music">
               <a class="blogs-item-music-cover" title="보여줄게 - AILEE" href="b000004.htm" >
-                <img class="lazyload" src="image/blank.gif-v=150.gif"  data-src="image/1417270493742188.jpg"  alt="보여줄게 - AILEE">
+                <img class="lazyload" src="image/1417270493742188.jpg" alt="보여줄게 - AILEE">
               </a>
               <a class="blogs-item-music-name settings-text_color" href="b000004.htm"  title="보여줄게 - AILEE">보여줄게 - AILEE</a>
               <div title="[DJ节目]_BUYO的DJ节目 第39期 - _BUYO" class="blogs-item-music-info settings-blog_desc_color">[DJ节目]_BUYO的DJ节目 第39期 - _BUYO</div>
@@ -232,7 +232,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             
             <a class="blogs-item-image" href="b000003.htm" >
               
-              <img class="blogs-item-image-view lazyload" src="image/blank.gif-v=150.gif" data-src="s.jpeg-v=1496803174.jpg" alt="" >
+              <img class="blogs-item-image-view lazyload" src="s.jpeg-v=1496803174.jpg"  alt="" >
               
             </a>
 
@@ -242,7 +242,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             
 <div class="blog_cont-info settings-blogs_border">
   <span class="blog_cont-info-author">
-    <a class="blog_cont-info-author-link" href="blogs-author=Alice.htm"  title="Alice"><img class="blog_cont-info-author-avatar" alt="Alice" src="image/s_w64h64.png-v=1496802750.png"  title="Alice_img"></a><a class="blog_cont-info-author-name settings-text_color" href="blogs-author=Alice.htm"  title="Alice">Alice</a>
+    <a class="blog_cont-info-author-link" href="blogs-author=Alice.htm"  title="Alice">
+    <img class="blog_cont-info-author-avatar" alt="Alice" src="image/s_w64h64.png-v=1496802750.png"  title="Alice_img"></a><a class="blog_cont-info-author-name settings-text_color" href="blogs-author=Alice.htm"  title="Alice">Alice</a>
   </span>
   
     <span class="blog_cont-info-time settings-blog_desc_color">2017-06-07 10:39</span>
@@ -264,7 +265,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             
 <div class="blog_cont-info settings-blogs_border">
   <span class="blog_cont-info-author">
-    <a class="blog_cont-info-author-link" href="blogs-author=Alice.htm"  title="Alice"><img class="blog_cont-info-author-avatar" alt="Alice" src="image/s_w64h64.png-v=1496802750.png" title="Alice_img"></a><a class="blog_cont-info-author-name settings-text_color" href="blogs-author=Alice.htm"  title="Alice">Alice</a>
+    <a class="blog_cont-info-author-link" href="blogs-author=Alice.htm"  title="Alice">
+    <img class="blog_cont-info-author-avatar" alt="Alice" src="image/s_w64h64.png-v=1496802750.png" title="Alice_img"></a><a class="blog_cont-info-author-name settings-text_color" href="blogs-author=Alice.htm"  title="Alice">Alice</a>
   </span>
   
     <span class="blog_cont-info-time settings-blog_desc_color">2017-06-07 10:37</span>

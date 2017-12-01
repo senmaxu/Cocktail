@@ -31,8 +31,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script src="js/jquery-1.11.3.min.js-v=150.js"  type='text/javascript'></script>
     <script src="js/jssdk-0.0.18.min.js-v=150.js" type='text/javascript'></script>
     <script src="js/lazyload.min.js-v=150.js"  type='text/javascript'></script>
-      <script src="js/jquery-1.4.2.min.js"  type='text/javascript'></script>
-        <script src="js/jquery.imagezoom.min.js"  type='text/javascript'></script>
+    <script src="js/jquery-1.4.2.min.js"  type='text/javascript'></script>
+    <script src="js/jquery.imagezoom.min.js"  type='text/javascript'></script>
 
     <!-- 社交分享信息 -->
 
@@ -201,19 +201,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <div class="pro-detail-quantity">
             <h3>选择数量</h3>
             <div class="pro-detail-quantity-inner">
-              <a class="pro-detail-quantity-d settings-main_border settings-desc_color" href="javascript:void(0);" id="yhsd_variantSelector_reduce">-</a>
+           <!--    <a class="pro-detail-quantity-d settings-main_border settings-desc_color" href="javascript:void(0);" id="yhsd_variantSelector_reduce">-</a>
               <a class="pro-detail-quantity-a settings-main_border settings-desc_color" href="javascript:void(0);" id="yhsd_variantSelector_add">+</a>
               <input class="pro-detail-quantity-ipt settings-main_border" type="text" value="1" id="yhsd_variantSelector_count" />
+            
+             -->
+            <img src="image/taobao_minus.jpg" alt="minus"  class="pro-detail-quantity-d settings-main_border settings-desc_color"/>
+            <input id="num_1" type="text"  value="1" class="pro-detail-quantity-ipt settings-main_border" readonly="readonly"/>
+            <img src="image/taobao_adding.jpg" alt="add" class="pro-detail-quantity-a settings-main_border settings-desc_color"/>
+            
+            
+            
+            
               <div class="pro-detail-quantity-desc">件<span>（库存<span id="yhsd_variantSelector_stock">${productions.rumCount}</span>件）</span></div>
             </div>
           </div>
           <div class="pro-detail-addBtn">
-            <a class="pro-detail-addCart settings-buyBtn_background settings-buyBtn_color" href="javascript:void(0);" id="yhsd_variantSelector_addCart">加入购物车</a>
-            <div class="pro-detail-addSucc settings-main_border settings-text_color settings-body_background" id="yhsd_variantSelector_addSucc">
+            <a class="pro-detail-addCart settings-buyBtn_background settings-buyBtn_color" href="addSp.html?id=${productions.id}" id="yhsd_variantSelector_addCart">加入购物车</a>
+          <!--   <div class="pro-detail-addSucc settings-main_border settings-text_color settings-body_background" id="yhsd_variantSelector_addSucc">
               <strong>添加成功！</strong>
               <a class="pro-detail-addSucc-goCart settings-buyBtn_background settings-buyBtn_color" href="cart.htm" >去购物车结算</a>
               <a class="pro-detail-addSucc-close settings-link_color" href="javascript:void(0);" id="yhsd_variantSelector_addSuccClose">关闭</a>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- 产品规格选择 End -->
@@ -240,7 +249,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script>
   // 当前商品
- 
+ $(function () {
+    chankNum();
+});
+//改变数量
+function  chankNum() {
+    $("img[alt=minus]").click(function () {
+        var num = $(this).next().val();//获取旁边数量减一
+        num--;
+        if (num <= 0) {
+            num = 1;
+        }
+        $(this).next().val(num);
+        getMoney();
+    })
+
+        $("img[alt=add]").click(function () {
+            var num = $(this).prev().val();//获取旁边数量加一
+            num++;
+            $(this).siblings().val(num);
+            getMoney();
+        });
+
+    }
   // LightBox 设置（解决 IE7-8 BUG 用 setTimeout）
   setTimeout(function() {
     try {

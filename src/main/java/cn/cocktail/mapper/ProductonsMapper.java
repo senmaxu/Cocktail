@@ -32,6 +32,10 @@ Integer countByPage(Map<String, Object>map);
  * @return
  */
 Productions findProductions(@Param("id")Integer id);
-
+/**
+ * 销量查询
+ * @return
+ */
+List<Productions> findBysales();
 }
  

@@ -1,5 +1,6 @@
 package cn.cocktail.service;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
@@ -22,4 +23,9 @@ Page<Productions> findByPage(Map<String, Object> map);
  * @return
  */
 Productions findProductions(@Param("id")Integer id);
+/**
+ * 销量查询
+ * @return
+ */
+List<Productions> findBysales();
 }
